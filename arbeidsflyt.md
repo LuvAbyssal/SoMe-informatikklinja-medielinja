@@ -170,7 +170,7 @@ Endringene dine ligger nå i din fork på GitHub.
 
 1. Vent 1–2 minutter. Følg gjerne med under **Actions** i forken din til du ser en grønn hake.
 2. Åpne GitHub Pages-adressen din (bokmerket fra steg 6).
-3. Trykk `Ctrl+F5` for å laste siden helt på nytt. Ellers kan nettleseren vise en gammel versjon.
+3. Trykk `Ctrl+F5` eller `Shift + Ctrl + R` for å laste siden helt på nytt. Ellers kan nettleseren vise en gammel versjon.
 4. Sjekk at:
    - Endringene dine vises.
    - Bildene dine vises. Hvis ikke, sjekk filnavnet (store og små bokstaver).
