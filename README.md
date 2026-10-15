@@ -4,6 +4,8 @@ Nettside som promoterer informatikklinja og medielinja på Kuben videregående s
 
 Krav, valgt løsning og mappestruktur er beskrevet i [dokumentasjon.md](dokumentasjon.md).
 
+**Er du elev?** Les [arbeidsflyt.md](arbeidsflyt.md) først. Der står det steg for steg hvordan du forker repoet, setter opp GitHub Pages, gjør endringer og lager en pull request.
+
 ## Kom i gang
 
 1. Åpne mappen i VS Code.
