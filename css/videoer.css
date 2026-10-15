@@ -1,0 +1,17 @@
+/* Stil for Videoer-seksjonen */
+
+/* Rutenett: så mange kolonner som får plass, minst 350px brede
+   (men aldri bredere enn skjermen) */
+.videoer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+  gap: 20px;
+}
+
+/* Videoene får vanlig videoformat (16:9) */
+.videoer iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 8px;
+}

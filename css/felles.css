@@ -1,0 +1,145 @@
+/* Felles stil for hele siden: farger, fonter, header og footer */
+
+/* Variabler: endre farger og høyder her, så endres de overalt */
+:root {
+  --hovedfarge: #6ab0d2;
+  --bakgrunn: #f7fafb;
+  --tekst: #111;
+  --header-hoyde: 70px;
+  --footer-hoyde: 44px;
+}
+
+/* Bredde og høyde inkluderer padding og kantlinje */
+* {
+  box-sizing: border-box;
+}
+
+/* Myk scrolling når man trykker på lenkene i menyen */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-bottom: var(--footer-hoyde); /* så footeren ikke dekker innholdet */
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bakgrunn);
+  color: var(--tekst);
+}
+
+/* ---------- Header ---------- */
+
+/* Headeren blir liggende øverst når man scroller */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: var(--header-hoyde);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  background: var(--hovedfarge);
+}
+
+.logo {
+  display: block;
+  height: 40px;
+}
+
+/* Menyen fyller resten av headeren, med lik avstand mellom lenkene */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Seksjoner ---------- */
+
+/* Innholdet midtstilles og blir ikke bredere enn 1100px.
+   Hver seksjon er minst like høy som plassen mellom header og footer,
+   så man ser bare én seksjon om gangen */
+section {
+  max-width: 1100px;
+  min-height: calc(100vh - var(--header-hoyde) - var(--footer-hoyde));
+  margin: 0 auto;
+  padding: 50px 20px;
+  scroll-margin-top: var(--header-hoyde); /* headeren dekker ikke overskriften */
+}
+
+section h2 {
+  font-size: 32px;
+}
+
+/* ---------- Footer ---------- */
+
+/* Footeren ligger alltid fast nederst i vinduet */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-hoyde);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background: var(--hovedfarge);
+  color: white;
+}
+
+footer p {
+  margin: 0;
+}
+
+.footer-lenker a {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+}
+
+/* ---------- Mobil ---------- */
+
+/* Gjelder bare skjermer som er 700px eller smalere */
+@media (max-width: 700px) {
+  /* Headeren er høyere på mobil */
+  :root {
+    --header-hoyde: 100px;
+  }
+
+  /* Logo øverst og menyen under */
+  header {
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  footer {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+
+  .footer-lenker a {
+    margin-left: 8px;
+  }
+}

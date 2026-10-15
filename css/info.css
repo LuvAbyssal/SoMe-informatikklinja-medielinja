@@ -1,0 +1,56 @@
+/* Stil for Info-seksjonen */
+
+/* Karusell og tekst side om side. Blir under hverandre på smal skjerm */
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Karusell: bildene ligger på rad, og man scroller/sveiper sidelengs */
+.karusell {
+  flex: 1 1 300px;
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  border: 2px solid var(--hovedfarge);
+  border-radius: 12px;
+}
+
+/* Hvert bilde fyller hele karusellen og "klikker" på plass */
+.karusell img {
+  width: 100%;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.info-tekst {
+  flex: 1 1 300px;
+  font-size: 22px;
+}
+
+/* Grå boks med SoMe-ikonene */
+.some {
+  padding: 10px;
+  border-radius: 12px;
+  background: #e8ecef;
+  text-align: center;
+}
+
+.some h3 {
+  margin: 5px 0 10px;
+}
+
+.some img {
+  width: 110px;
+  margin: 0 5px;
+  transition: transform 0.2s;
+}
+
+/* Ikonet blir litt større når musen er over */
+.some img:hover {
+  transform: scale(1.08);
+}

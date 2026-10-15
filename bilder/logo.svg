@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="372" height="52" viewBox="0 0 372 52">
+  <!-- Hvit "pille" som bakgrunn -->
+  <rect x="1" y="1" width="370" height="50" rx="25" fill="#ffffff" stroke="#6ab0d2" stroke-width="2"/>
+
+  <!-- Navn -->
+  <text x="24" y="35" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="23" fill="#111">Kuben - informatikk/media</text>
+</svg>
