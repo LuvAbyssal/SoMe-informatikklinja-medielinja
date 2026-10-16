@@ -147,6 +147,15 @@ Nå har både forken din og PC-en din den nyeste versjonen.
 2. Ikke endre `index.html`, `css/felles.css` eller `js/last-seksjoner.js` uten å avtale det med læreren først. Disse filene deles av alle.
 3. Lagre ofte (`Ctrl+S`) og sjekk resultatet i Live Server.
 
+> **Viktig om bilde-stier:** Seksjonsfilene hentes inn i `index.html`. Derfor skal stier til bilder skrives **som om du står i `index.html`**, ikke i mappen `seksjoner/`.
+>
+> | | I `seksjoner/bilder.html` |
+> |---|---|
+> | ✅ Riktig | `<img src="bilder/klasserom-1.jpg" alt="Klasserommet">` |
+> | ❌ Feil | `<img src="../bilder/klasserom-1.jpg" alt="Klasserommet">` |
+>
+> I CSS-filer er det motsatt: der er stien i forhold til CSS-filen selv. Et bakgrunnsbilde i `css/bilder.css` skrives derfor `url("../bilder/klasserom-1.jpg")`.
+
 > **Tips:** Bruk små bokstaver og ingen mellomrom eller æ, ø, å i filnavn på bilder. Skriv for eksempel `klasserom-1.jpg`, ikke `Klasserom Bilde 1.JPG`. GitHub Pages skiller mellom store og små bokstaver.
 
 ### Steg 11: Commit endringene
@@ -221,7 +230,8 @@ Når pull requesten er godkjent, begynner du på steg 9 neste gang du skal jobbe
 
 **Et bilde vises ikke**
 - Sjekk at filnavnet i HTML-en er helt likt filnavnet i `bilder/`, også store og små bokstaver.
-- Sjekk at stien starter med `bilder/`, for eksempel `<img src="bilder/klasserom-1.jpg" alt="Klasserommet">`.
+- I HTML-filene i `seksjoner/`: sjekk at stien starter med `bilder/`, ikke `../bilder/`. Stien skal være i forhold til `index.html` (se steg 10).
+- I CSS-filene: sjekk at stien starter med `../bilder/`.
 
 **«Sync fork» sier at det er en konflikt**
 - Du og en annen elev har endret samme fil. Ikke trykk **Discard commits**. Spør læreren om hjelp.
