@@ -2,10 +2,10 @@
 
 /* Variabler: endre farger og høyder her, så endres de overalt */
 :root {
-  --hovedfarge: #6ab0d2;
-  --bakgrunn: #f7fafb;
-  --tekst: #111;
-  --header-hoyde: 70px;
+  --hovedfarge: #61b2d6;
+  --bakgrunn: #8a83d655;
+  --tekst: #060b0e;
+  --header-hoyde: 75px;
   --footer-hoyde: 44px;
 }
 
@@ -40,6 +40,18 @@ header {
   gap: 20px;
   padding: 0 20px;
   background: var(--hovedfarge);
+}
+
+.header2 {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: var(--header-hoyde);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20px;
+  background: #d6d36f;
 }
 
 .logo {
