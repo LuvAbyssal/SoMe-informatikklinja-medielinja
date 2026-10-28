@@ -4,7 +4,7 @@
    (men aldri bredere enn skjermen) */
 .videoer {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(3500px, 100%), 1fr));
   gap: 20px;
 }
 

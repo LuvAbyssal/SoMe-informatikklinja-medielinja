@@ -10,7 +10,7 @@
 
 /* Karusell: bildene ligger på rad, og man scroller/sveiper sidelengs */
 .karusell {
-  flex: 1 1 300px;
+  flex: 1 1 3000px;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;

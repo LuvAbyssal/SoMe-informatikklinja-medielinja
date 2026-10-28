@@ -2,10 +2,10 @@
 
 /* Variabler: endre farger og høyder her, så endres de overalt */
 :root {
-  --hovedfarge: #61b2d6;
-  --bakgrunn: #8a83d655;
+  --hovedfarge: #0e0014;
+  --bakgrunn: #fdf3ff;
   --tekst: #060b0e;
-  --header-hoyde: 75px;
+  --header-hoyde: 95px;
   --footer-hoyde: 44px;
 }
 
@@ -42,21 +42,10 @@ header {
   background: var(--hovedfarge);
 }
 
-.header2 {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  height: var(--header-hoyde);
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 0 20px;
-  background: #d6d36f;
-}
-
 .logo {
   display: block;
-  height: 40px;
+  height: 170px;
+  padding-bottom: 1vh;
 }
 
 /* Menyen fyller resten av headeren, med lik avstand mellom lenkene */
@@ -127,15 +116,16 @@ footer p {
 @media (max-width: 700px) {
   /* Headeren er høyere på mobil */
   :root {
-    --header-hoyde: 100px;
+    --header-hoyde: 220px;
+    --height: 100px;
   }
 
   /* Logo øverst og menyen under */
   header {
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
-    gap: 8px;
+    padding: -40px;
+    gap: 0px;
   }
 
   nav {
